@@ -3,42 +3,37 @@ using namespace std;
 
 int main()
 {
-    int a;
-    cin>>a;
 
-    int arr1[a];
-    int arr2[a];
+    long long c;
+    cin>>c;
+    int r;
+     int moves;
 
-    for(int i=0;i<a;i++)
-    {
-        cin>>arr1[i];
-        cin>>arr2[i];
+
+    long long arr1[c], arr2[c];
+
+
+    for(int i = 0; i < c; i++) {
+        cin >> arr1[i]>>arr2[i];
     }
 
 
 
-    int i=0;
-    int j=0;
-    int moves=0;
 
 
-    while(i<a && j<a)
-    {
 
-        if(arr1[i]%arr2[j]!=0)
-        {
-           moves++;
-           arr1[i]=arr1[i]+1;
-        }
-        else if(arr1[i]%arr2[j]==0)
-        {
-            cout<< moves <<endl;
-            moves=0;
+     for(int i=0;i<c; i++)
+     {
 
-            i++;
-            j++;
+         long long a=arr1[i];
+         long long b=arr2[i];
 
-        }
-    }
+         r=a%b;
+
+        moves=(b-r)%b;
+
+     cout<<moves<<endl;
+     }
+
 
 }
